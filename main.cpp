@@ -53,7 +53,7 @@ std::set<std::string> loadTargetPlayers(const std::string& filename) {
     file.close();
 
     if (players.empty()) {
-        std::cerr << "No players found in " << filename << ". Add some usernames!\n";
+        std::cerr << "No players found in " << filename << ".\n";
     }
 
     return players;
@@ -69,7 +69,7 @@ void sendNotification(const std::string& playerName) {
     notifiedPlayers.insert(to_lower(playerName));
 
     std::wstring title = L"Moderator Detected";
-    std::wstring message = L"Moderator " + std::wstring(playerName.begin(), playerName.end()) + L" has joined the game!";
+    std::wstring message = L"Moderator " + std::wstring(playerName.begin(), playerName.end()) + L" has joined the game";
     std::wstring fullMessage = title + L"\n\n" + message;
 
     std::wstring psCommand =
@@ -113,24 +113,24 @@ int main() {
 #endif
 
     if (!RBX::Memory::attach()) {
-        std::cerr << "Couldn't connect to Roblox.\n";
-        std::cerr << "Make sure Roblox is running and run this as Administrator!\n";
-        std::cerr << "\nPress Enter to exit...";
+        std::cerr << "Unable connect to Roblox\n";
+        std::cerr << "Ensure that Roblox is running\n";
+        std::cerr << "\nPress Enter to exit from the External";
         std::cin.get();
         return 1;
     }
 
     void* baseAddr = RBX::Memory::getRobloxBaseAddr();
     if (baseAddr == nullptr) {
-        std::cerr << "Failed to get Roblox base address!\n";
-        std::cerr << "\nPress Enter to exit...";
+        std::cerr << "Failed to get Roblox base address\n";
+        std::cerr << "\nPress enter to exit";
         std::cin.get();
         return 1;
     }
 
     std::set<std::string> targetPlayers = loadTargetPlayers("playerlist.txt");
     if (targetPlayers.empty()) {
-        std::cerr << "\nPress Enter to exit...";
+        std::cerr << "\nPress Enter to exit";
         std::cin.get();
         return 1;
     }
@@ -153,8 +153,8 @@ int main() {
         if (dataModel.address == 0 || dataModel.address == nullptr) {
             failCount++;
             if (failCount > 5) {
-                std::cerr << "\nFailed to get DataModel. Your offsets might be outdated!\n";
-                std::cerr << "\nPress Enter to exit...";
+                std::cerr << "\nFailed to get DataModel. (Most likely outdated offsets, please check for newer ones)\n";
+                std::cerr << "\nPress Enter to exit";
                 std::cin.get();
                 return 1;
             }
