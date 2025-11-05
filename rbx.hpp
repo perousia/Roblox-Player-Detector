@@ -85,12 +85,21 @@ namespace RBX
 		{
 			int strLenght{ Memory::read<int>((void*)((uintptr_t)addr + Offsets::StringLength)) };
 
+			if (strLenght < 0 || strLenght > 10000)
+			{
+				return std::string();
+			}
+
 			if (strLenght >= 16)
 			{
 				addr = Memory::read<void*>((void*)((uintptr_t)addr));
+				if (addr == nullptr)
+				{
+					return std::string();
+				}
 			}
 
-			std::vector<char> buffer(256);
+			std::vector<char> buffer(strLenght + 1);
 			SIZE_T bytesRead{ 0 };
 
 			ReadProcessMemory(handle, addr, buffer.data(), strLenght, &bytesRead);
@@ -205,14 +214,22 @@ namespace RBX
 		{
 			std::vector<Instance> children;
 
-			uintptr_t start{ Memory::read<uintptr_t>((void*)((uintptr_t)address + Offsets::Children)) };
-			uintptr_t end{ Memory::read<uintptr_t>((void*)(start + Offsets::ChildrenEnd)) };
+			uintptr_t childrenStart{ Memory::read<uintptr_t>((void*)((uintptr_t)address + Offsets::Children)) };
+			if (childrenStart == 0)
+			{
+				return children;
+			}
 
-			for (uintptr_t ptr{ Memory::read<uintptr_t>((void*)start) }; ptr != end; ptr += 0x10)
+			uintptr_t start{ Memory::read<uintptr_t>((void*)childrenStart) };
+			uintptr_t end{ Memory::read<uintptr_t>((void*)(childrenStart + Offsets::ChildrenEnd)) };
+
+			for (uintptr_t ptr = start; ptr != end; ptr += 0x10)
 			{
 				uintptr_t childAddr{ Memory::read<uintptr_t>((void*)ptr) };
-
-				children.emplace_back((void*)childAddr);
+				if (childAddr != 0)
+				{
+					children.emplace_back((void*)childAddr);
+				}
 			}
 
 			return children;
@@ -312,7 +329,7 @@ namespace RBX
 		{
 			Vector4 quaternion;
 
-			Vector2 dimensions{ GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN) }; // roblox window needs to be maximized or fullscreened
+			Vector2 dimensions{ GetSystemMetrics(SM_CXSCREEN), GetSystemMetrics(SM_CYSCREEN) };
 			Matrix4 viewMatrix{ getViewMatrix() };
 
 			quaternion.x = (world.x * viewMatrix.data[0]) + (world.y * viewMatrix.data[1]) + (world.z * viewMatrix.data[2]) + viewMatrix.data[3];
