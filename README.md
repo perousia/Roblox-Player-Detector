@@ -1,12 +1,8 @@
-# **Roblox Player Detector**
+# **Roblox Player Detector External**
 
 [![Join Discord](https://img.shields.io/badge/Discord-Join-5865F2?style=for-the-badge&logo=discord)](https://discord.gg/wQaJJQQrXR)
 
-**Note**: To ensure Windows toast notifications appear when in Windows fullscreen, follow the setup tutorial available in the Discord server.
 
-For non-programmers, check the Discord server above for an API scraper to compile your `playerlist.txt` file with a list of players from a certain role in the Roblox group of your choice, as well as the prebuilt for the application.
-
-Additionally, the offsets will have to be updated once in a while, I will try to publish newer ones in the repository when they're out.
 ## Overview
 A C++ tool for monitoring player lists in Roblox games. It connects to the running Roblox process to check for specific users and sends a Windows toast notification when one from your list joins.
 
