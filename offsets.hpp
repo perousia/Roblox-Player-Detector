@@ -6,22 +6,25 @@
 #include <string>
 
 
-// Roblox Version: version-f6dd34ecac7b4642
+ 
+
+// Roblox Version: version-e380c8edc8f6477c
 // Byfron Version: ???
 namespace Offsets {
     static constexpr uintptr_t Adornee = 0xD0;
-    static constexpr uintptr_t Anchored = 0x28D;
+    static constexpr uintptr_t Anchored = 0x24D;
     static constexpr uintptr_t AnchoredMask = 0x2;
     static constexpr uintptr_t AnimationId = 0xD0;
     static constexpr uintptr_t AttributeToNext = 0x58;
     static constexpr uintptr_t AttributeToValue = 0x18;
     static constexpr uintptr_t AutoJumpEnabled = 0x1DB;
+    static constexpr uintptr_t BanningEnabled = 0x14C;
     static constexpr uintptr_t BeamBrightness = 0x190;
     static constexpr uintptr_t BeamColor = 0x120;
     static constexpr uintptr_t BeamLightEmission = 0x19C;
     static constexpr uintptr_t BeamLightInfuence = 0x1A0;
-    static constexpr uintptr_t CFrame = 0xF8;
-    static constexpr uintptr_t Camera = 0x410;
+    static constexpr uintptr_t CFrame = 0xC0;
+    static constexpr uintptr_t Camera = 0x420;
     static constexpr uintptr_t CameraMaxZoomDistance = 0x2F0;
     static constexpr uintptr_t CameraMinZoomDistance = 0x2F4;
     static constexpr uintptr_t CameraMode = 0x2F8;
@@ -29,9 +32,9 @@ namespace Offsets {
     static constexpr uintptr_t CameraRotation = 0xF8;
     static constexpr uintptr_t CameraSubject = 0xE8;
     static constexpr uintptr_t CameraType = 0x158;
-    static constexpr uintptr_t CanCollide = 0x28D;
+    static constexpr uintptr_t CanCollide = 0x24D;
     static constexpr uintptr_t CanCollideMask = 0x8;
-    static constexpr uintptr_t CanTouch = 0x28D;
+    static constexpr uintptr_t CanTouch = 0x24D;
     static constexpr uintptr_t CanTouchMask = 0x10;
     static constexpr uintptr_t CharacterAppearanceId = 0x298;
     static constexpr uintptr_t Children = 0x70;
@@ -41,7 +44,7 @@ namespace Offsets {
     static constexpr uintptr_t ClickDetectorMaxActivationDistance = 0x100;
     static constexpr uintptr_t ClockTime = 0x1B8;
     static constexpr uintptr_t CreatorId = 0x188;
-    static constexpr uintptr_t DataModelDeleterPointer = 0x0;//not found
+    static constexpr uintptr_t DataModelDeleterPointer = 0x77A03B0;
     static constexpr uintptr_t DataModelPrimitiveCount = 0x430;
     static constexpr uintptr_t DataModelToRenderView1 = 0x1D0;
     static constexpr uintptr_t DataModelToRenderView2 = 0x8;
@@ -52,8 +55,10 @@ namespace Offsets {
     static constexpr uintptr_t Dimensions = 0x720;
     static constexpr uintptr_t DisplayName = 0x130;
     static constexpr uintptr_t EvaluateStateMachine = 0x1DD;
+    static constexpr uintptr_t FFlagList = 0x7560D98;
+    static constexpr uintptr_t FFlagToValueGetSet = 0x30;
     static constexpr uintptr_t FOV = 0x160;
-    static constexpr uintptr_t FakeDataModelPointer = 0x759FD28;
+    static constexpr uintptr_t FakeDataModelPointer = 0x77A03A8;
     static constexpr uintptr_t FakeDataModelToDataModel = 0x1C0;
     static constexpr uintptr_t FogColor = 0xFC;
     static constexpr uintptr_t FogEnd = 0x134;
@@ -68,37 +73,38 @@ namespace Offsets {
     static constexpr uintptr_t FrameSizeOffsetY = 0x54C;
     static constexpr uintptr_t FrameSizeX = 0x540;
     static constexpr uintptr_t FrameSizeY = 0x544;
+    static constexpr uintptr_t FrameVisible = 0x5B9;
     static constexpr uintptr_t GameId = 0x190;
-    static constexpr uintptr_t GameLoaded = 0x5F0;
-    static constexpr uintptr_t Gravity = 0x958;
+    static constexpr uintptr_t GameLoaded = 0x628;
+    static constexpr uintptr_t Gravity = 0x968;
     static constexpr uintptr_t Health = 0x194;
     static constexpr uintptr_t HealthDisplayDistance = 0x318;
     static constexpr uintptr_t HipHeight = 0x1A0;
     static constexpr uintptr_t HumanoidDisplayName = 0xD0;
-    static constexpr uintptr_t HumanoidState = 0x858;
+    static constexpr uintptr_t HumanoidState = 0x860;
     static constexpr uintptr_t HumanoidStateId = 0x20;
     static constexpr uintptr_t InputObject = 0x100;
     static constexpr uintptr_t InsetMaxX = 0x100;
     static constexpr uintptr_t InsetMaxY = 0x104;
     static constexpr uintptr_t InsetMinX = 0xF8;
     static constexpr uintptr_t InsetMinY = 0xFC;
-    static constexpr uintptr_t InstanceAttributePointer1 = 0x40;
+    static constexpr uintptr_t InstanceAttributePointer1 = 0x48;
     static constexpr uintptr_t InstanceAttributePointer2 = 0x18;
     static constexpr uintptr_t InstanceCapabilities = 0x588;
     static constexpr uintptr_t JobEnd = 0x1D8;
     static constexpr uintptr_t JobId = 0x138;
     static constexpr uintptr_t JobStart = 0x1D0;
     static constexpr uintptr_t Job_Name = 0x18;
-    static constexpr uintptr_t JobsPointer = 0x0;
+    static constexpr uintptr_t JobsPointer = 0x78E31E0;
     static constexpr uintptr_t JumpPower = 0x1B0;
     static constexpr uintptr_t LocalPlayer = 0x130;
     static constexpr uintptr_t LocalScriptByteCode = 0x1A8;
     static constexpr uintptr_t LocalScriptBytecodePointer = 0x10;
     static constexpr uintptr_t LocalScriptHash = 0x1B8;
-    static constexpr uintptr_t MaterialType = 0x0;
-    static constexpr uintptr_t MaxHealth = 0x1C4;
+    static constexpr uintptr_t MaterialType = 0x226;
+    static constexpr uintptr_t MaxHealth = 0x1B4;
     static constexpr uintptr_t MaxSlopeAngle = 0x1B8;
-    static constexpr uintptr_t MeshPartColor3 = 0x1CC;
+    static constexpr uintptr_t MeshPartColor3 = 0x194;
     static constexpr uintptr_t MeshPartTexture = 0x310;
     static constexpr uintptr_t ModelInstance = 0x360;
     static constexpr uintptr_t ModuleScriptByteCode = 0x150;
@@ -106,24 +112,24 @@ namespace Offsets {
     static constexpr uintptr_t ModuleScriptHash = 0x168;
     static constexpr uintptr_t MoonTextureId = 0xD8;
     static constexpr uintptr_t MousePosition = 0xEC;
-    static constexpr uintptr_t MouseSensitivity = 0x7677810;
+    static constexpr uintptr_t MouseSensitivity = 0x787A6C0;
     static constexpr uintptr_t MoveDirection = 0x158;
-    static constexpr uintptr_t Name = 0x90;
+    static constexpr uintptr_t Name = 0xB0;
     static constexpr uintptr_t NameDisplayDistance = 0x324;
     static constexpr uintptr_t NameSize = 0x10;
-    static constexpr uintptr_t OnDemandInstance = 0x38;
+    static constexpr uintptr_t OnDemandInstance = 0x40;
     static constexpr uintptr_t OutdoorAmbient = 0x108;
-    static constexpr uintptr_t Parent = 0x60;
-    static constexpr uintptr_t PartSize = 0x1CC;
-    static constexpr uintptr_t Ping = 0xC8;
+    static constexpr uintptr_t Parent = 0x68;
+    static constexpr uintptr_t PartSize = 0x1B0;
+    static constexpr uintptr_t Ping = 0xCC;
     static constexpr uintptr_t PlaceId = 0x198;
-    static constexpr uintptr_t PlayerConfigurerPointer = 0x757C588;
-    static constexpr uintptr_t PlayerMouse = 0xCC8;
-    static constexpr uintptr_t Position = 0x11C;
+    static constexpr uintptr_t PlayerConfigurerPointer = 0x777C870;
+    static constexpr uintptr_t PlayerMouse = 0xCD0;
+    static constexpr uintptr_t Position = 0xE4;
     static constexpr uintptr_t Primitive = 0x148;
     static constexpr uintptr_t PrimitiveValidateValue = 0x6;
     static constexpr uintptr_t PrimitivesPointer1 = 0x398;
-    static constexpr uintptr_t PrimitivesPointer2 = 0x210;
+    static constexpr uintptr_t PrimitivesPointer2 = 0x248;
     static constexpr uintptr_t ProximityPromptActionText = 0xD0;
     static constexpr uintptr_t ProximityPromptEnabled = 0x156;
     static constexpr uintptr_t ProximityPromptGamepadKeyCode = 0x13C;
@@ -133,11 +139,15 @@ namespace Offsets {
     static constexpr uintptr_t RenderJobToDataModel = 0x1B0;
     static constexpr uintptr_t RenderJobToFakeDataModel = 0x38;
     static constexpr uintptr_t RenderJobToRenderView = 0x218;
-    static constexpr uintptr_t RequireBypass = 0x8E0;
+    static constexpr uintptr_t RequireBypass = 0x0;
     static constexpr uintptr_t RigType = 0x1C8;
-    static constexpr uintptr_t Rotation = 0x100;
+    static constexpr uintptr_t RootPartR15 = 0x608;
+    static constexpr uintptr_t RootPartR6 = 0x4A8;
+    static constexpr uintptr_t Rotation = 0xC8;
     static constexpr uintptr_t RunContext = 0x148;
-    static constexpr uintptr_t ScriptContext = 0x3D0;
+    static constexpr uintptr_t Sandboxed = 0xC5;
+    static constexpr uintptr_t ScreenGuiEnabled = 0x515;
+    static constexpr uintptr_t ScriptContext = 0x3F0;
     static constexpr uintptr_t Sit = 0x1DC;
     static constexpr uintptr_t SkyboxBk = 0x100;
     static constexpr uintptr_t SkyboxDn = 0x128;
@@ -149,9 +159,9 @@ namespace Offsets {
     static constexpr uintptr_t StarCount = 0x220;
     static constexpr uintptr_t StringLength = 0x10;
     static constexpr uintptr_t SunTextureId = 0x1F0;
-    static constexpr uintptr_t TagList = 0x110;
+    static constexpr uintptr_t TagList = 0x0;
     static constexpr uintptr_t TaskSchedulerMaxFPS = 0x1B0;
-    static constexpr uintptr_t TaskSchedulerPointer = 0x76DE128;
+    static constexpr uintptr_t TaskSchedulerPointer = 0x78E3008;
     static constexpr uintptr_t Team = 0x270;
     static constexpr uintptr_t TeamColor = 0xD0;
     static constexpr uintptr_t TextLabelText = 0xAE0;
@@ -160,16 +170,18 @@ namespace Offsets {
     static constexpr uintptr_t Transparency = 0xF0;
     static constexpr uintptr_t UserId = 0x2A8;
     static constexpr uintptr_t Value = 0xD0;
-    static constexpr uintptr_t Velocity = 0x128;
+    static constexpr uintptr_t ValueGetSetToValue = 0xC0;
+    static constexpr uintptr_t Velocity = 0xF0;
     static constexpr uintptr_t ViewportSize = 0x2E8;
     static constexpr uintptr_t VisualEngine = 0x10;
-    static constexpr uintptr_t VisualEnginePointer = 0x72FE710;
+    static constexpr uintptr_t VisualEnginePointer = 0x75278C0;
     static constexpr uintptr_t VisualEngineToDataModel1 = 0x700;
     static constexpr uintptr_t VisualEngineToDataModel2 = 0x1C0;
     static constexpr uintptr_t WalkSpeed = 0x1D4;
-    static constexpr uintptr_t WalkSpeedCheck = 0x3A0;
+    static constexpr uintptr_t WalkSpeedCheck = 0x3A8;
     static constexpr uintptr_t Workspace = 0x178;
     static constexpr uintptr_t WorkspaceToWorld = 0x398;
     static constexpr uintptr_t viewmatrix = 0x4B0;
 }
+
 
